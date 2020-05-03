@@ -60,22 +60,39 @@ var app = new Vue({
         },
       ],
   },
+  methods:{
+    changeColor: function(idname){
+      var obj = document.getElementById(idname);
+      obj.style.color = '#fafafa';            //文字色を白にする
+      obj.style.backgroundColor = '#a2d5f2';  //背景色を赤にする
+    },
+    changeColor2: function(idname){
+      var obj = document.getElementById(idname);
+      obj.style.color = '#8785a2';            //文字色を白にする
+      obj.style.backgroundColor = '#ffc7c7';  //背景色を赤にする
+    },
+    changeColor3: function(idname){
+      var obj = document.getElementById(idname);
+      obj.style.color = '#155724';            //文字色を白にする
+      obj.style.backgroundColor = '#d4edda';  //背景色を赤にする
+    }
+  }
 })
 
-function changeColor(idname){
-  var obj = document.getElementById(idname);
-  obj.style.color = '#fafafa';            //文字色を白にする
-  obj.style.backgroundColor = '#a2d5f2';  //背景色を赤にする
-}
+// function changeColor(idname){
+//   var obj = document.getElementById(idname);
+//   obj.style.color = '#fafafa';
+//   obj.style.backgroundColor = '#a2d5f2';
+// }
 
-function changeColor2(idname){
-  var obj = document.getElementById(idname);
-  obj.style.color = '#8785a2';            //文字色を白にする
-  obj.style.backgroundColor = '#ffc7c7';  //背景色を赤にする
-}
+// function changeColor2(idname){
+//   var obj = document.getElementById(idname);
+//   obj.style.color = '#8785a2';
+//   obj.style.backgroundColor = '#ffc7c7';
+// }
 
-function changeColor3(idname){
-  var obj = document.getElementById(idname);
-  obj.style.color = '#155724';            //文字色を白にする
-  obj.style.backgroundColor = '#d4edda';  //背景色を赤にする
-}
+// function changeColor3(idname){
+//   var obj = document.getElementById(idname);
+//   obj.style.color = '#155724';
+//   obj.style.backgroundColor = '#d4edda';
+// }
