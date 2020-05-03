@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4"><strong>v-model,v-bind</strong></h1>
+        <span v-html="explanation.vbind"></span>
+        <span v-html="explanation.vmodel"></span>
+        <hr class="my-4">
+          <div class='vmodel'>
+            <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">v-model</label>
+              <input type="email" class="form-control" v-model="userData.vmodel" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">記入したデータがリアルタイムで表示（v-model):{{ userData.vmodel }}</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">v-bind</label>
+              <input type="email" class="form-control" :value="userData.vbind" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">何も表示されないよ(v-bind):{{ userData.vbind }}</small>
+            </div>
+            </form>
+              v-bindはurlをバインドさせたりなどに使われることが多い？→
+              <a :href="url.bootstrap_url"><img v-if="show" :src="url.img_url" alt="" height="50"></a>
+          </div>
+      </div>
+      <div class="jumbotron">
+      <h1 class="display-4"><strong>v-for,v-html</strong></h1>
+      <span v-html="explanation.vfor"></span>
+      <span v-html="explanation.vhtml"></span>
+      <hr class="my-4">
+          <div class='container maeketing'>
+          <div  class="row">
+            <div v-for="(item, i) in items" :key="i" class="col-lg-4">
+              <img class="bd-placeholder-img rounded-circle" :src="item.img" width="140" height="140"  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><rect width="100%" height="100%" fill="#777"></rect>
+              <h2>{{item.title}}</h2>
+              <p><span v-html="item.text"></span></p>
+            </div><!-- /.col-lg-4 -->
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h1 class="display-4"><strong>v-on</strong></h1>
+        <span v-html="explanation.von"></span>
+        <hr class="my-4">
+        <div>
+          <button type="button" class="btn btn-primary" @click="sayit('奈良いいでしょ！？')">押してみte!</button>
+        </div>
+        <label for="table">良く使われるイベント例<br/>他の例も気になる時は<a :href="url.event_url">こちら</a>を参照</label>
+        <table class="table">
+        <thead class="thead-light">
+        <tr>
+          <th>#</th>
+          <th>イベント名</th>
+          <th>発生のタイミング</th>
+        </tr>
+        </thead>
+        <tbody v-for="(eventItem, i) in eventItems" :key="i">
+          <tr>
+            <th scope="row">{{i}}</th>
+            <td>{{eventItem.eventname}}</td>
+            <td>{{eventItem.eventEx}}</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
