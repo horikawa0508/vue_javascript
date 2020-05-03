@@ -53,7 +53,7 @@ var app = new Vue({
           h2Class: 'alert alert-danger',
           name: 'アインシュタイン',
           eachName: '稲田直樹:左<br/>河井ゆずる:右',
-          text: '2019年『よしもと男前・ブサイク芸人ランキング』では稲田が3年連続ブサイク芸人1位、河井が初の男前芸人1位。稲田が自虐をツカミにするが、漫才に入ってからは会話のやりとりで笑いを取るスタイル。',
+          text: '『よしもと男前・ブサイク芸人ランキング』では稲田が3年連続ブサイク芸人1位、河井が初の男前芸人1位。稲田が自虐をツカミにするが、漫才に入ってからは会話のやりとりで笑いを取るスタイル。',
           link1: 'https://profile.yoshimoto.co.jp/talent/detail?id=3262',
           link2: 'https://natalie.mu/owarai/artist/9772',
           link3: 'https://www.youtube.com/channel/UCOQbu_y-fT-_ZvzCsz1r-kw'
@@ -78,21 +78,3 @@ var app = new Vue({
     }
   }
 })
-
-// function changeColor(idname){
-//   var obj = document.getElementById(idname);
-//   obj.style.color = '#fafafa';
-//   obj.style.backgroundColor = '#a2d5f2';
-// }
-
-// function changeColor2(idname){
-//   var obj = document.getElementById(idname);
-//   obj.style.color = '#8785a2';
-//   obj.style.backgroundColor = '#ffc7c7';
-// }
-
-// function changeColor3(idname){
-//   var obj = document.getElementById(idname);
-//   obj.style.color = '#155724';
-//   obj.style.backgroundColor = '#d4edda';
-// }
